@@ -103,7 +103,7 @@ export default async function callback(params: {
         } catch (error) {
           return {
             redirect: `${url}/error?error=${encodeURIComponent(
-              (error as Error).message
+              (error as Error).message,
             )}`,
             cookies,
           }
@@ -207,6 +207,13 @@ export default async function callback(params: {
         return { redirect: `${url}/error?error=configuration`, cookies }
       }
 
+      console.log("WE'RE ACTUALLY CALLING THE NEW THING")
+      console.log("WE'RE ACTUALLY CALLING THE NEW THING")
+      console.log("WE'RE ACTUALLY CALLING THE NEW THING")
+      console.log("WE'RE ACTUALLY CALLING THE NEW THING")
+      console.log("WE'RE ACTUALLY CALLING THE NEW THING")
+      console.log("WE'RE ACTUALLY CALLING THE NEW THING")
+
       // @ts-expect-error -- Verified in `assertConfig`. adapter: Adapter<true>
       const invite = await adapter.useVerificationToken({
         identifier,
@@ -243,7 +250,7 @@ export default async function callback(params: {
       } catch (error) {
         return {
           redirect: `${url}/error?error=${encodeURIComponent(
-            (error as Error).message
+            (error as Error).message,
           )}`,
           cookies,
         }
@@ -343,7 +350,7 @@ export default async function callback(params: {
       return {
         status: 401,
         redirect: `${url}/error?error=${encodeURIComponent(
-          (error as Error).message
+          (error as Error).message,
         )}`,
         cookies,
       }
@@ -375,7 +382,7 @@ export default async function callback(params: {
     } catch (error) {
       return {
         redirect: `${url}/error?error=${encodeURIComponent(
-          (error as Error).message
+          (error as Error).message,
         )}`,
         cookies,
       }
