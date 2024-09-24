@@ -1,7 +1,6 @@
 {
-  "name": "root",
-  "version": "0.0.0",
-  "private": true,
+  "name": "next-auth",
+  "version": "4.24.7",
   "repository": "https://github.com/nextauthjs/next-auth.git",
   "scripts": {
     "build:app": "turbo run build --filter=next-auth-app",
@@ -47,33 +46,5 @@
   },
   "engines": {
     "node": "^12.19.0 || ^14.15.0 || ^16.13.0 || ^18.12.0"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": false,
-    "overrides": [
-      {
-        "files": "apps/dev/pages/api/auth/[...nextauth].ts",
-        "options": {
-          "printWidth": 150
-        }
-      }
-    ]
-  },
-  "packageManager": "pnpm@7.13.3",
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/balazsorban44"
-    },
-    {
-      "type": "opencollective",
-      "url": "https://opencollective.com/nextauth"
-    }
-  ],
-  "pnpm": {
-    "overrides": {
-      "undici": "5.11.0"
-    }
   }
 }
